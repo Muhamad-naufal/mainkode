@@ -9,6 +9,7 @@ require_once '../../backend/connection/db.php';
 // Dummy data statistik (nanti bisa diambil dari database)
 $total_blog = $pdo->query("SELECT COUNT(*) FROM blog")->fetchColumn();
 $total_projects = $pdo->query("SELECT COUNT(*) FROM projects")->fetchColumn();
+$total_games = $pdo->query("SELECT COUNT(*) FROM games")->fetchColumn();
 ?>
 
 <!DOCTYPE html>
@@ -71,6 +72,10 @@ $total_projects = $pdo->query("SELECT COUNT(*) FROM projects")->fetchColumn();
                 <div class="bg-gradient-to-tr from-blue-600 to-cyan-500 p-5 rounded-xl shadow-lg">
                     <h2 class="text-xl font-semibold"><i class="bi bi-briefcase mr-2"></i> Total Projects</h2>
                     <p class="text-4xl font-bold mt-2"><?= $total_projects ?></p>
+                </div>
+                <div class="bg-gradient-to-tr from-blue-600 to-cyan-500 p-5 rounded-xl shadow-lg">
+                    <h2 class="text-xl font-semibold"><i class="bi bi-briefcase mr-2"></i> Total Games</h2>
+                    <p class="text-4xl font-bold mt-2"><?= $total_games ?></p>
                 </div>
             </div>
 

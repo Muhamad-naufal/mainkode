@@ -79,7 +79,7 @@ if (!$blog) {
             <!-- Gambar Header -->
             <?php if (!empty($blog['gambar'])): ?>
                 <div class="rounded-xl overflow-hidden mb-10">
-                    <img src="../backend/uploads/<?= htmlspecialchars($blog['gambar']) ?>" alt="<?= htmlspecialchars($blog['judul']) ?>" class="w-full object-cover max-h-[400px]">
+                    <img src="../backend/uploads/blog/<?= htmlspecialchars($blog['gambar']) ?>" alt="<?= htmlspecialchars($blog['judul']) ?>" class="w-full object-cover max-h-[400px]">
                 </div>
             <?php endif; ?>
 

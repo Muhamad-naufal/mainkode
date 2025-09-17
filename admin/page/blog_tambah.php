@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gambar = '';
     if (!empty($_FILES['gambar']['name'])) {
         $namaGambar = time() . '_' . basename($_FILES['gambar']['name']);
-        $target = '../../backend/uploads/' . $namaGambar;
+        $target = '../../backend/uploads/blog/' . $namaGambar;
         if (move_uploaded_file($_FILES['gambar']['tmp_name'], $target)) {
             $gambar = $namaGambar;
         }

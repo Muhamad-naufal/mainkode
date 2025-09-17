@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gambar = $_FILES['gambar']['name'] ?: $blog['gambar'];
 
     if ($_FILES['gambar']['name']) {
-        move_uploaded_file($_FILES['gambar']['tmp_name'], '../../backend/uploads/' . $gambar);
+        move_uploaded_file($_FILES['gambar']['tmp_name'], '../../backend/uploads/blog' . $gambar);
     }
 
     // Update blog

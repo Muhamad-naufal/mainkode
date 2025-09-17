@@ -20,7 +20,7 @@
                 <!-- KARTU ARTIKEL -->
                 <a href="page/blog_detail.php?id=<?= $a['id'] ?>" class="block">
                     <div class="bg-white text-gray-800 rounded-3xl overflow-hidden shadow-xl group hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="<?= $index * 100 ?>">
-                        <img src="backend/uploads/<?= htmlspecialchars($a['gambar']) ?>" alt="cover" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="backend/uploads/blog/<?= htmlspecialchars($a['gambar']) ?>" alt="cover" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="p-6">
                             <h3 class="text-lg font-semibold mb-2 group-hover:text-accent transition-colors duration-300">
                                 <?= htmlspecialchars($a['judul']) ?>

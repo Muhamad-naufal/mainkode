@@ -87,7 +87,7 @@ $allTags = $pdo->query("SELECT * FROM tag ORDER BY nama")->fetchAll();
             <?php foreach ($blogs as $blog): ?>
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl hover:shadow-yellow-500/30 transition-all duration-300 group overflow-hidden flex flex-col">
                     <?php if (!empty($blog['gambar'])): ?>
-                        <img src="../backend/uploads/<?= htmlspecialchars($blog['gambar']) ?>"
+                        <img src="../backend/uploads/blog/<?= htmlspecialchars($blog['gambar']) ?>"
                             alt="<?= htmlspecialchars($blog['judul']) ?>"
                             class="object-cover w-full h-48 group-hover:scale-105 transition-transform duration-300">
                     <?php else: ?>
