@@ -5,18 +5,24 @@
     <aside class="lg:col-span-1 space-y-4 lg:sticky lg:top-20 self-start">
         <h2 class="text-xl font-bold mb-3 border-b border-gray-700 pb-2">🔥 Exclusive Games</h2>
         <div class="grid gap-5">
-            <?php foreach ($exclusive as $ex): ?>
-                <a href="detail.php?id=<?= $ex['id'] ?>" class="block">
-                    <div class="card p-3 rounded bg-gray-900 transition transform hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-600/20">
-                        <img src="../backend/uploads/games/<?= htmlspecialchars($ex['cover_image']) ?>"
-                            alt="<?= htmlspecialchars($ex['title']) ?>"
-                            class="w-full h-40 object-cover rounded">
-                        <h3 class="font-semibold text-white text-sm mt-3"><?= htmlspecialchars($ex['title']) ?></h3>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+            <?php if (!empty($exclusive)): ?>
+                <?php foreach ($exclusive as $ex): ?>
+                    <a href="detail.php?id=<?= $ex['id'] ?>" class="block">
+                        <div class="card p-3 rounded bg-gray-900 transition transform hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-600/20">
+                            <img src="../backend/uploads/games/<?= htmlspecialchars($ex['cover_image']) ?>"
+                                alt="<?= htmlspecialchars($ex['title']) ?>"
+                                class="w-full h-40 object-cover rounded">
+                            <h3 class="font-semibold text-white text-sm mt-3"><?= htmlspecialchars($ex['title']) ?></h3>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p class="text-gray-400">Belum ada game exclusive.</p>
+            <?php endif; ?>
         </div>
     </aside>
+
+
 
     <!-- RIGHT: All Games -->
     <div class="lg:col-span-3 space-y-6">

@@ -9,6 +9,7 @@
         <!-- Desktop Nav -->
         <nav class="hidden md:flex space-x-8 text-sm font-medium text-white items-center">
             <a href="../index.php" class="hover:text-[#F26E1C] transition">Home</a>
+            <a href="../games/index.php" class="hover:text-[#F26E1C] transition">Games</a>
 
             <!-- Dropdown Fitur Desktop -->
             <div class="relative" @mouseenter="fiturOpen = true" @mouseleave="fiturOpen = false">

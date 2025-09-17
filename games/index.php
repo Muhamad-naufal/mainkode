@@ -35,8 +35,9 @@ $stmt->execute();
 $games = $stmt->fetchAll();
 
 // --- Ambil exclusive ---
-$sqlEx = "SELECT * FROM games WHERE is_exclusive = 1 ORDER BY created_at DESC LIMIT 5";
-$exclusive = $pdo->query($sqlEx)->fetchAll();
+$sqlexclusive = "SELECT * FROM games WHERE is_exclusive = 1 ORDER BY id DESC LIMIT 5";
+$exclusive = $pdo->query($sqlexclusive)->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!doctype html>
 <html lang="id">

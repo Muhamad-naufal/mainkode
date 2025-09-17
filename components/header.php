@@ -10,6 +10,7 @@
         <nav class="hidden md:flex space-x-8 text-sm font-medium text-white items-center">
             <a href="#" class="hover:text-[#F26E1C] transition">Beranda</a>
             <a href="#about" class="hover:text-[#F26E1C] transition">Tentang</a>
+            <a href="games/index.php" class="hover:text-[#F26E1C] transition">Games</a>
 
             <!-- Dropdown Fitur -->
             <div class="relative" @mouseenter="fiturOpen = true" @mouseleave="fiturOpen = false">
