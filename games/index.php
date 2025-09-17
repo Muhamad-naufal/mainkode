@@ -2,7 +2,7 @@
 // --- Database connection ---
 include '../backend/connection/db.php';
 // --- Pagination setup ---
-$limit = 6; // jumlah game per halaman
+$limit = 15; // jumlah game per halaman
 $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 if ($page < 1) $page = 1;
 $offset = ($page - 1) * $limit;

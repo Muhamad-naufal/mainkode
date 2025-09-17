@@ -78,8 +78,12 @@ if (!$blog) {
 
             <!-- Gambar Header -->
             <?php if (!empty($blog['gambar'])): ?>
-                <div class="rounded-xl overflow-hidden mb-10">
-                    <img src="../backend/uploads/blog/<?= htmlspecialchars($blog['gambar']) ?>" alt="<?= htmlspecialchars($blog['judul']) ?>" class="w-full object-cover max-h-[400px]">
+                <div class="relative w-full overflow-hidden mb-10">
+                    <div class="relative w-full overflow-hidden mb-10">
+                        <img src="../backend/uploads/blog/<?= htmlspecialchars($blog['gambar']) ?>"
+                            alt="<?= htmlspecialchars($blog['judul']) ?>"
+                            class="w-full max-h-[500px] object-cover object-center" />
+                    </div>
                 </div>
             <?php endif; ?>
 
@@ -127,7 +131,7 @@ if (!$blog) {
                         <?php foreach ($related as $item): ?>
                             <a href="blog_detail.php?id=<?= $item['id'] ?>" class="group bg-white/5 hover:bg-accent/10 border border-white/10 rounded-xl overflow-hidden transition backdrop-blur-sm">
                                 <?php if (!empty($item['gambar'])): ?>
-                                    <div class="h-40 bg-cover bg-center" style="background-image: url('../backend/uploads/<?= htmlspecialchars($item['gambar']) ?>');"></div>
+                                    <div class="h-40 bg-cover bg-center" style="background-image: url('../backend/uploads/blog/<?= htmlspecialchars($item['gambar']) ?>');"></div>
                                 <?php else: ?>
                                     <div class="h-40 bg-gray-700 flex items-center justify-center text-gray-400">Tidak ada gambar</div>
                                 <?php endif; ?>

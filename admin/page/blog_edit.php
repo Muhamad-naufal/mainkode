@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gambar = $_FILES['gambar']['name'] ?: $blog['gambar'];
 
     if ($_FILES['gambar']['name']) {
-        move_uploaded_file($_FILES['gambar']['tmp_name'], '../../backend/uploads/blog' . $gambar);
+        move_uploaded_file($_FILES['gambar']['tmp_name'], '../../backend/uploads/blog/' . $gambar);
     }
 
     // Update blog
@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label class="block mb-2 text-sm font-semibold text-gray-300">Gambar (opsional)</label>
                 <input type="file" name="gambar" class="block w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-purple-600 file:text-white hover:file:bg-purple-700" />
                 <?php if ($blog['gambar']): ?>
-                    <img src="../../backend/uploads/<?= $blog['gambar'] ?>" alt="Gambar Blog" class="mt-3 rounded-lg shadow-lg w-52">
+                    <img src="../../backend/uploads/blog/<?= $blog['gambar'] ?>" alt="Gambar Blog" class="mt-3 rounded-lg shadow-lg w-52">
                 <?php endif; ?>
             </div>
 
